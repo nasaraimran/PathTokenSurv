@@ -1,0 +1,65 @@
+{
+  "ncbi_gene_info": {
+    "url": "https://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz",
+    "path": "annotations\\raw\\Homo_sapiens.gene_info.gz",
+    "bytes": 5172550,
+    "sha256": "6238d0d3973d121d19a6d4f835365df25622c57b5954d714c7f647230c463bbb",
+    "last_modified": "Sat, 08 Aug 2026 11:07:40 GMT",
+    "retrieved_utc": "2026-08-09T01:50:49.594792+00:00"
+  },
+  "reactome_membership": {
+    "url": "https://reactome.org/download/current/NCBI2Reactome_All_Levels.txt",
+    "path": "annotations\\raw\\NCBI2Reactome_All_Levels.txt",
+    "bytes": 98024930,
+    "sha256": "53bbe42b357655e341630898547af8d23badab592e6050c34d4317fbffc04ce4",
+    "last_modified": "Fri, 19 Jun 2026 00:35:59 GMT",
+    "retrieved_utc": "2026-08-09T01:50:55.482242+00:00"
+  },
+  "reactome_pathways": {
+    "url": "https://reactome.org/download/current/ReactomePathways.txt",
+    "path": "annotations\\raw\\ReactomePathways.txt",
+    "bytes": 1592393,
+    "sha256": "f6d7a2bf89b5bcfe0250a0bc7f51bff94641447911712b8ff129f5b55e52df3a",
+    "last_modified": "Fri, 19 Jun 2026 00:47:11 GMT",
+    "retrieved_utc": "2026-08-09T01:50:58.190140+00:00"
+  },
+  "reactome_relations": {
+    "url": "https://reactome.org/download/current/ReactomePathwaysRelation.txt",
+    "path": "annotations\\raw\\ReactomePathwaysRelation.txt",
+    "bytes": 634259,
+    "sha256": "fd49a624d80c14eb37ae57a02e141d574d5ede3f60022bb99edbd909448a3f1e",
+    "last_modified": "Fri, 19 Jun 2026 00:37:28 GMT",
+    "retrieved_utc": "2026-08-09T01:51:00.280982+00:00"
+  },
+  "kegg_info": {
+    "url": "https://rest.kegg.jp/info/kegg",
+    "path": "annotations\\raw\\kegg_info.txt",
+    "bytes": 811,
+    "sha256": "daffa27dc687fa6534d0fd13e2022827f16f461425cdfcef518260df5e0eff66",
+    "last_modified": null,
+    "retrieved_utc": "2026-08-09T01:51:01.771508+00:00"
+  },
+  "kegg_pathways": {
+    "url": "https://rest.kegg.jp/list/pathway/hsa",
+    "path": "annotations\\raw\\kegg_hsa_pathways.txt",
+    "bytes": 22117,
+    "sha256": "345290b203a665fa7604f36ba51d78095a712c6c02820fb09fde82a5a90c0a3a",
+    "last_modified": null,
+    "retrieved_utc": "2026-08-09T01:51:03.749021+00:00"
+  },
+  "kegg_gene_links": {
+    "url": "https://rest.kegg.jp/link/pathway/hsa",
+    "path": "annotations\\raw\\kegg_hsa_gene_pathway_links.txt",
+    "bytes": 923966,
+    "sha256": "06ba65afa62d39857cfc7702c8f5ead6184efd35e47e841d10106d654b770f52",
+    "last_modified": null,
+    "retrieved_utc": "2026-08-09T01:51:06.734202+00:00"
+  },
+  "mirtarbase": {
+    "url": "https://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2025/cache/download/10.0/hsa_MTI.csv",
+    "status": "download_failed",
+    "message": "Failed to download https://mirtarbase.cuhk.edu.cn/~miRTarBase/miRTarBase_2025/cache/download/10.0/hsa_MTI.csv: <urlopen error [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1000)>",
+    "manual_action": "Download hsa_MTI.csv from the miRTarBase release page and rerun with --mirtarbase-file."
+  },
+  "created_utc": "2026-08-09T01:51:13.707129+00:00"
+}

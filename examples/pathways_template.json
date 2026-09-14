@@ -1,0 +1,9 @@
+{
+  "pathways": ["Pathway_A", "Pathway_B"],
+  "modality_features": {
+    "mrna": {"Pathway_A": ["FEATURE_1", "FEATURE_2"], "Pathway_B": ["FEATURE_3"]},
+    "mirna": {"Pathway_A": ["FEATURE_1"], "Pathway_B": ["FEATURE_2", "FEATURE_3"]},
+    "cnv": {"Pathway_A": ["FEATURE_1", "FEATURE_2"], "Pathway_B": ["FEATURE_3"]}
+  },
+  "adjacency": [[0, 1], [1, 0]]
+}

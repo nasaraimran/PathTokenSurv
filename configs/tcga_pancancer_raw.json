@@ -1,0 +1,122 @@
+{
+  "data": {
+    "data_dir": "data/tcga_pancancer_raw",
+    "source_format": "tcga_pancancer_raw",
+    "outcomes_file": "outcomes.tsv",
+    "clinical_file": "PanCancer_Clinical.xlsx",
+    "modality_files": {
+      "mrna": "PanCancer_mRNA.txt",
+      "mirna": "PanCancer_miRNA.txt",
+      "cnv": "PanCancer_CNV.txt"
+    },
+    "pathway_file": "pathways.json",
+    "delimiter": "\t",
+    "patient_id_col": "patient_id",
+    "time_col": "time",
+    "event_col": "event",
+    "cancer_col": "cancer_type",
+    "clinical_continuous": [
+      "age"
+    ],
+    "clinical_categorical": [
+      "sex",
+      "race",
+      "stage",
+      "histology"
+    ],
+    "variance_thresholds": {
+      "mrna": 7.0,
+      "mirna": 0.0,
+      "cnv": 0.2
+    },
+    "min_features_per_modality": 8,
+    "min_features_per_pathway": 2,
+    "max_features_per_pathway": 128,
+    "clip_scaled_values": true,
+    "clinical_sheet": "TCGA-CDR",
+    "tcga_clinical_patient_id_col": "bcr_patient_barcode",
+    "tcga_clinical_cancer_col": "type",
+    "tcga_clinical_time_col": "OS.time",
+    "tcga_clinical_event_col": "OS",
+    "tcga_age_col": "age_at_initial_pathologic_diagnosis",
+    "tcga_sex_col": "gender",
+    "tcga_race_col": "race",
+    "tcga_pathologic_stage_col": "ajcc_pathologic_tumor_stage",
+    "tcga_clinical_stage_col": "clinical_stage",
+    "tcga_histology_col": "histological_type",
+    "tcga_patient_barcode_length": 12,
+    "tcga_allowed_sample_types": [
+      "01",
+      "03",
+      "09",
+      "06"
+    ],
+    "tcga_duplicate_patient_strategy": "mean",
+    "tcga_duplicate_feature_strategy": "mean",
+    "tcga_exclude_zero_survival_time": true,
+    "tcga_raw_float_dtype": "float32",
+    "tcga_molecular_feature_columns": {
+      "mrna": "sample",
+      "mirna": "sample",
+      "cnv": "Sample"
+    },
+    "min_modalities_per_pathway": 1,
+    "preprocessing_feature_chunk_size": 2048,
+    "max_pathways": 256,
+    "balance_pathway_sources": true,
+    "min_selected_annotation_coverage_pct": {
+      "mrna": 20.0,
+      "mirna": 10.0,
+      "cnv": 20.0
+    },
+    "max_features_per_pathway_by_modality": {
+      "mrna": 128,
+      "mirna": 32,
+      "cnv": 128
+    },
+    "mirna_conservative_alias_harmonization": true
+  },
+  "model": {
+    "d_model": 128,
+    "n_heads": 8,
+    "intramodal_layers": 1,
+    "fusion_layers": 2,
+    "reconstruction_layers": 1,
+    "ffn_multiplier": 4,
+    "dropout": 0.15,
+    "num_time_bins": 20,
+    "pathway_same_bias_init": 0.5,
+    "pathway_graph_bias_init": 0.25,
+    "use_pathway_bias": true,
+    "use_reconstruction": true,
+    "use_subset_consistency": true,
+    "use_cancer_deviation": true,
+    "tokenizer_pathway_chunk_size": 32
+  },
+  "training": {
+    "seed": 123,
+    "device": "auto",
+    "batch_size": 8,
+    "num_workers": 0,
+    "max_epochs": 200,
+    "patience": 20,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "gradient_clip_norm": 5.0,
+    "lambda_reconstruction": 0.25,
+    "lambda_consistency": 0.1,
+    "lambda_baseline": 0.01,
+    "baseline_smoothness": 0.25,
+    "modality_drop_probability": 0.35,
+    "always_keep_clinical": false,
+    "scheduler_t_max": 200,
+    "min_learning_rate": 1e-06,
+    "ensemble_size": 5
+  },
+  "evaluation": {
+    "bootstrap_repetitions": 1000,
+    "calibration_bins": 10,
+    "evaluation_horizons": []
+  },
+  "output_dir": "outputs/tcga_route_c"
+}

@@ -1,0 +1,4 @@
+pathway_id	pathway_name	gene_symbol	entrez_id
+R-HSA-000001	Example pathway A	TP53	7157
+R-HSA-000001	Example pathway A	EGFR	1956
+hsa00002	Example pathway B	BRCA1	672

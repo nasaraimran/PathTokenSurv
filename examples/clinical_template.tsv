@@ -1,0 +1,3 @@
+patient_id	age	sex	race	histology
+PATIENT_001	61	Female	Group_A	Histology_A
+PATIENT_002	58	Male	Group_B	Histology_B

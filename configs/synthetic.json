@@ -1,0 +1,86 @@
+{
+  "data": {
+    "data_dir": "data/synthetic",
+    "outcomes_file": "outcomes.tsv",
+    "clinical_file": "clinical.tsv",
+    "modality_files": {
+      "mrna": "mrna.tsv",
+      "mirna": "mirna.tsv",
+      "cnv": "cnv.tsv"
+    },
+    "pathway_file": "pathways.json",
+    "delimiter": "\t",
+    "patient_id_col": "patient_id",
+    "time_col": "time",
+    "event_col": "event",
+    "cancer_col": "cancer_type",
+    "clinical_continuous": [
+      "age"
+    ],
+    "clinical_categorical": [
+      "sex",
+      "race",
+      "histology"
+    ],
+    "variance_thresholds": {
+      "mrna": 0.0,
+      "mirna": 0.0,
+      "cnv": 0.0
+    },
+    "min_features_per_modality": 8,
+    "min_features_per_pathway": 1,
+    "max_features_per_pathway": 32,
+    "clip_scaled_values": true,
+    "preprocessing_feature_chunk_size": 2048,
+    "max_pathways": 64,
+    "balance_pathway_sources": true,
+    "max_features_per_pathway_by_modality": {
+      "mrna": 32,
+      "mirna": 32,
+      "cnv": 32
+    },
+    "mirna_conservative_alias_harmonization": true
+  },
+  "model": {
+    "d_model": 24,
+    "n_heads": 4,
+    "intramodal_layers": 1,
+    "fusion_layers": 1,
+    "reconstruction_layers": 1,
+    "ffn_multiplier": 2,
+    "dropout": 0.05,
+    "num_time_bins": 6,
+    "pathway_same_bias_init": 0.5,
+    "pathway_graph_bias_init": 0.25,
+    "use_pathway_bias": true,
+    "use_reconstruction": true,
+    "use_subset_consistency": true,
+    "use_cancer_deviation": true
+  },
+  "training": {
+    "seed": 123,
+    "device": "auto",
+    "batch_size": 24,
+    "num_workers": 0,
+    "max_epochs": 8,
+    "patience": 8,
+    "learning_rate": 0.001,
+    "weight_decay": 1e-05,
+    "gradient_clip_norm": 5.0,
+    "lambda_reconstruction": 0.25,
+    "lambda_consistency": 0.1,
+    "lambda_baseline": 0.01,
+    "baseline_smoothness": 0.25,
+    "modality_drop_probability": 0.35,
+    "always_keep_clinical": false,
+    "scheduler_t_max": 8,
+    "min_learning_rate": 1e-06,
+    "ensemble_size": 1
+  },
+  "evaluation": {
+    "bootstrap_repetitions": 50,
+    "calibration_bins": 6,
+    "evaluation_horizons": []
+  },
+  "output_dir": "outputs/synthetic_run"
+}

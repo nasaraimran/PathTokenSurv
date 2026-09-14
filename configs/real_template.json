@@ -1,0 +1,86 @@
+{
+  "data": {
+    "data_dir": "/path/to/tcga_route_c",
+    "outcomes_file": "outcomes.tsv",
+    "clinical_file": "clinical.tsv",
+    "modality_files": {
+      "mrna": "mrna.tsv",
+      "mirna": "mirna.tsv",
+      "cnv": "cnv.tsv"
+    },
+    "pathway_file": "pathways.json",
+    "delimiter": "\t",
+    "patient_id_col": "patient_id",
+    "time_col": "time",
+    "event_col": "event",
+    "cancer_col": "cancer_type",
+    "clinical_continuous": [
+      "age"
+    ],
+    "clinical_categorical": [
+      "sex",
+      "race",
+      "histology"
+    ],
+    "variance_thresholds": {
+      "mrna": 7.0,
+      "mirna": 0.0,
+      "cnv": 0.2
+    },
+    "min_features_per_modality": 8,
+    "min_features_per_pathway": 2,
+    "max_features_per_pathway": 128,
+    "clip_scaled_values": true,
+    "preprocessing_feature_chunk_size": 2048,
+    "max_pathways": 256,
+    "balance_pathway_sources": true,
+    "max_features_per_pathway_by_modality": {
+      "mrna": 128,
+      "mirna": 32,
+      "cnv": 128
+    },
+    "mirna_conservative_alias_harmonization": true
+  },
+  "model": {
+    "d_model": 128,
+    "n_heads": 8,
+    "intramodal_layers": 1,
+    "fusion_layers": 2,
+    "reconstruction_layers": 1,
+    "ffn_multiplier": 4,
+    "dropout": 0.15,
+    "num_time_bins": 20,
+    "pathway_same_bias_init": 0.5,
+    "pathway_graph_bias_init": 0.25,
+    "use_pathway_bias": true,
+    "use_reconstruction": true,
+    "use_subset_consistency": true,
+    "use_cancer_deviation": true
+  },
+  "training": {
+    "seed": 123,
+    "device": "auto",
+    "batch_size": 16,
+    "num_workers": 4,
+    "max_epochs": 200,
+    "patience": 20,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "gradient_clip_norm": 5.0,
+    "lambda_reconstruction": 0.25,
+    "lambda_consistency": 0.1,
+    "lambda_baseline": 0.01,
+    "baseline_smoothness": 0.25,
+    "modality_drop_probability": 0.35,
+    "always_keep_clinical": false,
+    "scheduler_t_max": 200,
+    "min_learning_rate": 1e-06,
+    "ensemble_size": 5
+  },
+  "evaluation": {
+    "bootstrap_repetitions": 1000,
+    "calibration_bins": 10,
+    "evaluation_horizons": []
+  },
+  "output_dir": "outputs/tcga_route_c"
+}

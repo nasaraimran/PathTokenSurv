@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local data and third-party annotations
+data/tcga_pancancer_raw/*
+!data/tcga_pancancer_raw/README.md
+annotations/raw/*
+!annotations/raw/README.md
+!annotations/raw/source_manifest.json
+annotations/processed/*
+!annotations/processed/README.md
+
+# Generated experiments and figures
+outputs/*
+!outputs/README.md
+figures/output/
+figures/outputs/
+
+# Large model artifacts and archives
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.npz
+*.zip
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak

@@ -1,0 +1,176 @@
+{
+  "pathways": [
+    "Pathway_0",
+    "Pathway_1",
+    "Pathway_2",
+    "Pathway_3",
+    "Pathway_4",
+    "Pathway_5"
+  ],
+  "modality_features": {
+    "mrna": {
+      "Pathway_0": [
+        "mrna_feature_000",
+        "mrna_feature_006",
+        "mrna_feature_012",
+        "mrna_feature_018"
+      ],
+      "Pathway_1": [
+        "mrna_feature_001",
+        "mrna_feature_007",
+        "mrna_feature_013",
+        "mrna_feature_019"
+      ],
+      "Pathway_2": [
+        "mrna_feature_002",
+        "mrna_feature_008",
+        "mrna_feature_014",
+        "mrna_feature_020"
+      ],
+      "Pathway_3": [
+        "mrna_feature_003",
+        "mrna_feature_009",
+        "mrna_feature_015",
+        "mrna_feature_021"
+      ],
+      "Pathway_4": [
+        "mrna_feature_004",
+        "mrna_feature_010",
+        "mrna_feature_016",
+        "mrna_feature_022"
+      ],
+      "Pathway_5": [
+        "mrna_feature_005",
+        "mrna_feature_011",
+        "mrna_feature_017",
+        "mrna_feature_023"
+      ]
+    },
+    "mirna": {
+      "Pathway_0": [
+        "mirna_feature_000",
+        "mirna_feature_006",
+        "mirna_feature_012",
+        "mirna_feature_018"
+      ],
+      "Pathway_1": [
+        "mirna_feature_001",
+        "mirna_feature_007",
+        "mirna_feature_013",
+        "mirna_feature_019"
+      ],
+      "Pathway_2": [
+        "mirna_feature_002",
+        "mirna_feature_008",
+        "mirna_feature_014",
+        "mirna_feature_020"
+      ],
+      "Pathway_3": [
+        "mirna_feature_003",
+        "mirna_feature_009",
+        "mirna_feature_015",
+        "mirna_feature_021"
+      ],
+      "Pathway_4": [
+        "mirna_feature_004",
+        "mirna_feature_010",
+        "mirna_feature_016",
+        "mirna_feature_022"
+      ],
+      "Pathway_5": [
+        "mirna_feature_005",
+        "mirna_feature_011",
+        "mirna_feature_017",
+        "mirna_feature_023"
+      ]
+    },
+    "cnv": {
+      "Pathway_0": [
+        "cnv_feature_000",
+        "cnv_feature_006",
+        "cnv_feature_012",
+        "cnv_feature_018"
+      ],
+      "Pathway_1": [
+        "cnv_feature_001",
+        "cnv_feature_007",
+        "cnv_feature_013",
+        "cnv_feature_019"
+      ],
+      "Pathway_2": [
+        "cnv_feature_002",
+        "cnv_feature_008",
+        "cnv_feature_014",
+        "cnv_feature_020"
+      ],
+      "Pathway_3": [
+        "cnv_feature_003",
+        "cnv_feature_009",
+        "cnv_feature_015",
+        "cnv_feature_021"
+      ],
+      "Pathway_4": [
+        "cnv_feature_004",
+        "cnv_feature_010",
+        "cnv_feature_016",
+        "cnv_feature_022"
+      ],
+      "Pathway_5": [
+        "cnv_feature_005",
+        "cnv_feature_011",
+        "cnv_feature_017",
+        "cnv_feature_023"
+      ]
+    }
+  },
+  "adjacency": [
+    [
+      0.0,
+      1.0,
+      1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      1.0,
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      1.0
+    ],
+    [
+      1.0,
+      0.0,
+      0.0,
+      1.0,
+      1.0,
+      0.0
+    ]
+  ]
+}
